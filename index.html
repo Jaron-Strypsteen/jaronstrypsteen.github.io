@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>The Open Movie Database</title>
+    <meta name="description" content="Eindopdracht (Movie Database)">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/screen.css">
+    <link href="https://fonts.googleapis.com/css?family=DM+Sans:400,500,700&display=swap" rel="stylesheet">
+
+    <script src="./script/app.js"></script>
+    <script src="./script/dataHandler.js"></script>
+    <script src="https://kit.fontawesome.com/18451a900f.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.bundle.min.js"></script>
+</head>
+
+<body>
+    <div class="c-app">
+        <header class="c-app__topbar">
+            <a href="#" onclick="refresh();"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="32"
+                    height="32" viewBox="0 0 32 32" class="c-logo">
+                    <path
+                        d="M12 9c0-2.761 2.239-5 5-5s5 2.239 5 5c0 2.761-2.239 5-5 5s-5-2.239-5-5zM0 9c0-2.761 2.239-5 5-5s5 2.239 5 5c0 2.761-2.239 5-5 5s-5-2.239-5-5zM24 19v-3c0-1.1-0.9-2-2-2h-20c-1.1 0-2 0.9-2 2v10c0 1.1 0.9 2 2 2h20c1.1 0 2-0.9 2-2v-3l8 5v-14l-8 5zM20 24h-16v-6h16v6z">
+                    </path>
+                </svg>
+            </a>
+            <nav class="c-main-nav">
+                <ul>
+                    <li class="c-main-nav__item is-selected c-nav-movies"><a href="#" onclick="refresh();">Movies</a>
+                    </li>
+                    <li class="c-main-nav__item c-nav-graph"><a href="#" class="c-graph">Graphs</a></li>
+                    <li class="c-main-nav__item"><a href="./landing.html">Landing</a></li>
+                </ul>
+                <div class="c-search"><input class="c-search__input" type="search" name="search" id="search"
+                        autocomplete="off" placeholder="Search...">
+                </div>
+            </nav>
+        </header>
+        <main class="c-app__main">
+            <h2>Popular</h2>
+            <div class="c-popular c-movies"></div>
+            <h2>Top Rated</h2>
+            <div class="c-TopRated c-movies"></div>
+            <h2>Trending</h2>
+            <div class="c-trending c-movies"></div>
+        </main>
+
+    </div>
+    <div class="c-modal">
+        <div class="c-modal_content">
+            <span class="close" onclick="modalClose();">&times;</span>
+            <div class="c-backdrop"></div>
+        </div>
+    </div>
+</body>
+
+</html>
