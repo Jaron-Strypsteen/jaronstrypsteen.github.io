@@ -1,5 +1,5 @@
 'use strict';
-let URL = 'https://api-gateway-ext-prod-ue1-1080259533.us-east-1.elb.amazonaws.com/3/';
+let URL = 'https://api.themoviedb.org/3/';
 let APIKEY = 'e507d3248450fb3a50a8a5a71e28a272';
 let domPopularMovies, domTopRatedMovies, domTrendingMovies, domMain;
 let domModal;
