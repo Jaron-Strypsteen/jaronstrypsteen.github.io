@@ -701,17 +701,16 @@ input:focus {
 
 }
 
-@media screen and (min-width: 65rem) {
-    .c-landing_box {
-        background: var(--light-grey);
-        margin: 5% auto;
-        width: 80vw;
-        height: 80vh;
-        display: grid;
-        grid-template-columns: 1fr 2fr;
-        grid-area: "l1 l2";
-    }
+.c-landing_box {
+    background: var(--light-grey);
+    margin: 5% auto;
+    width: 80vw;
+    height: auto;
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-area: "l1 l2";
 }
+
 
 .c-landing-area1 {
     grid-area: "l1";
@@ -722,12 +721,11 @@ input:focus {
 }
 
 .c-landing-mockup {
-    width: 100%;
-    margin: 5%;
+    width: 70%;
+    margin: 20%;
 }
 
 .c-landing-mockup:hover {
-    width: 103%;
     transition: var(--transition-alpha);
 }
 
@@ -735,9 +733,9 @@ input:focus {
     margin: 5%;
 }
 
-.c-landing-input input[type='text'] {
-    width: 70%;
-    margin-top: 30%;
+.c-landing-input input[type='email'] {
+    width: 80%;
+    margin-top: 10%;
     padding: 2px 0px 0px 10px;
     border: none;
     background-color: var(--dark-grey);
@@ -746,13 +744,13 @@ input:focus {
     transition: var(--transition-alpha);
 }
 
-.c-landing-input input[type='text']:hover {
+.c-landing-input input[type='email']:hover {
     box-shadow: 0 5px 0px 0px var(--light-pink);
     color: white;
 
 }
 
-.c-landing-input input[type='text']:focus {
+.c-landing-input input[type='email']:focus {
     color: white;
     border: none;
     outline: 1px solid var(--light-pink);
@@ -760,7 +758,7 @@ input:focus {
 }
 
 .c-landing-input input[type='submit'] {
-    width: 29%;
+    width: 19%;
     margin-left: 1%;
     padding: 2px 0px 0px 10px;
     border: none;
@@ -772,11 +770,38 @@ input:focus {
 
 .c-landing-input input[type='submit']:hover {
     box-shadow: 0 5px 0px 0px var(--light-pink);
+    color: white;
 }
 
 .c-landing-input input[type='submit']:active {
     outline: 1px solid var(--light-pink);
     color: var(--light-pink);
+}
+
+@media (max-width: 800px) {
+    .c-landing-mockup {
+        width: 50%;
+        margin-right: auto;
+        margin-left: auto;
+        display: table;
+    }
+
+    .c-landing_box {
+        grid-template-rows: auto auto;
+        grid-template-columns: auto;
+        grid-area: "l1"
+            "l2";
+    }
+
+    .c-landing-input input[type='submit'] {
+        width: 100%;
+        margin: 0;
+    }
+
+    .c-landing-input input[type='email'] {
+        margin-bottom: 2%;
+        width: 100%;
+    }
 }
 
 /*------------------------------------*\
